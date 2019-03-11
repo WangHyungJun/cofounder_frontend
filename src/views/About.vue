@@ -14,7 +14,7 @@
   export default {
     data() {
       return {
-        apiurl: "http://www.wanghyungjun-api.co.uk/cofounderapi/users",
+        apiurl: "https://www.wanghyungjun-api.co.uk/cofounderapi/users",
         loginform:{email: '', username: '',password: '',checkpassword: ''},
         message: {errormessage:'', usernamevalid: false, success:''}
       }
