@@ -16,7 +16,7 @@
       return {
         apiurl: "https://www.wanghyungjun-api.co.uk/cofounderapi/users",
         loginform:{email: '', username: '',password: '',checkpassword: ''},
-        message: {errormessage:'', usernamevalid: false, success:''}
+        message: {errormessage:'', usernamevalid: false, success:''},
       }
     },
     methods:{
@@ -29,7 +29,8 @@
                   checkpassword: this.loginform.checkpassword
               }).then(function (data) {
                   if(data.body['error']!=undefined) this.message.errormessage=data.body['error'][0];
-                  if(data.body['success']!=undefined) alert(data.body['success'])
+                  if(data.body['success']!=undefined) alert(data.body['success']); this.$router.push({'name': "login"})
+
               })
           }else{
               this.message.errormessage="닉네임을 3글자 이상으로 정해주세요";
